@@ -1,0 +1,3 @@
+here in 
+{PROJECTS} work.js --> workCard.js -->workCardData.js {work wale ka initial cap letter}
+{EXPERIENCE} word.js -->wordCard.js -->wordCardData.js {word wale ka initial is not cap}

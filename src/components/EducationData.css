@@ -1,0 +1,26 @@
+.ehist{
+    /* display: block; */
+    background-color: rgba(122, 112, 107, 0.881);
+    align-items: center;
+    height:21rem;
+    width: 100px;
+    text-align:center;
+    padding:2rem;
+    margin: 100px;
+    width:1000px;
+    font-size: 1.3rem;
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.UL_for_ED{
+    text-align: left;
+    transition-property: all;
+    background-color: beige;
+    padding: 2rem ;
+    opacity: 0.6;
+    border-radius: 12px;
+}
+

@@ -1,0 +1,43 @@
+.skills-main {
+    margin-top: 5rem;
+  }
+  .skills-container {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .skills-container img {
+    height: 6rem;
+  }
+  #skills-txt {
+    margin-top: 5rem;
+    color: lightslategray;
+    margin-left: 2rem;
+    font-size: 2rem;
+  }
+  @media (max-width: 600px) {
+    .skills-main {
+      margin-top: 3rem;
+    }
+    .skills-container {
+      margin-top: 2rem;
+      padding-left: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .skills-container img {
+      height: 3rem;
+    }
+    #skills-txt {
+      font-size: 1rem;
+    }
+  }
+.for_more{
+  position:relative;
+  color:rgba(194, 185, 180, 0.881);
+  margin-left:90px;
+  margin-top:80px;
+  font-size:25px;
+}
+  
