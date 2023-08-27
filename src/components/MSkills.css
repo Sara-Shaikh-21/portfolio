@@ -4,7 +4,7 @@
   .skills-container {
     margin-top: 3rem;
     padding: 1.5rem;
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(8, 1fr);
   }
   .skills-container img {
@@ -23,12 +23,10 @@
     .skills-container {
       margin-top: 2rem;
       padding-left: 2rem;
-      display: grid;
+      display: flex;
       grid-template-columns: repeat(3, 1fr);
     }
-    .skills-container img {
-      height: 3rem;
-    }
+   
     #skills-txt {
       font-size: 1rem;
     }
@@ -37,7 +35,7 @@
   position:relative;
   color:rgba(194, 185, 180, 0.881);
   margin-left:90px;
-  margin-top:80px;
+  margin-top:70px;
   font-size:25px;
 }
   

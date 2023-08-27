@@ -8,7 +8,8 @@ const Work = () => {
     <div className="Work-container">
     <h1 className="projects-heading">Projects</h1>
     <div className="project-container">
-        {WordCardData.map((val,ind)=>{
+        {
+          WordCardData.map((val,ind)=>{
             return (
                 <WorkCard 
                     key={ind}

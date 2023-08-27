@@ -27,7 +27,7 @@
 }
 
 .right .img-container{
-    display:grid;
+    display:flex;
     grid-template-columns: repeat(12,1fr);
     position:relative;
     align-items:right;

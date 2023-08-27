@@ -11,7 +11,7 @@ const Experiences = () => {
   return (
     <div>
     <Navbar/>
-    <HeroImg2 heading="Experiences" text="Some of my potential contributions."/>
+    <HeroImg2 heading="Work Experiences" text="Some of my potential contributions."/>
     <Word />
     <Footer />
     </div>

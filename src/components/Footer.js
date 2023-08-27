@@ -1,7 +1,7 @@
 import "./FooterStyles.css";
 import React from 'react'
 import {FaHome,FaPhone, FaMailBulk,FaTwitter, FaFacebook, FaLinkedin, FaGithub, FaInstagram} from "react-icons/fa"
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -17,7 +17,7 @@ const Footer = () => {
         </div>
 
         <div className="phone">
-        <FaPhone size={20} style={{color:"#fff" ,marginRight:"2rem"}}/>+91 72101101**
+        <FaPhone size={20} style={{color:"#fff" ,marginRight:"2rem"}}/>+91 72101*****
         </div>
 
         <div className="email">
