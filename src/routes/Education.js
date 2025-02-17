@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import EducationData from '../components/EducationData'
-import Footer from '../components/Footer'
-import HeroImg2 from '../components/HeroImg2'
+import Navbar from '../components/Navbar/Navbar'
+import EducationData from '../components/EducationData/EducationData'
+import Footer from '../components/Footer/Footer'
+import HeroImg2 from '../components/Hero Image 2/HeroImg2'
 
 const Education = () => {
   return (

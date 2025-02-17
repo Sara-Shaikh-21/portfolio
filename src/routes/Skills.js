@@ -1,9 +1,9 @@
 // use rafce to create dummmy structure
 import React from 'react'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import MSkills from '../components/MSkills'
-import HeroImg2 from '../components/HeroImg2'
+import Footer from '../components/Footer/Footer'
+import Navbar from '../components/Navbar/Navbar'
+import MSkills from '../components/Skills/MSkills'
+import HeroImg2 from '../components/Hero Image 2/HeroImg2'
 
 const Skills = () => {
   return (

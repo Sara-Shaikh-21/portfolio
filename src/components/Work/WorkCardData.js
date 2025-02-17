@@ -1,9 +1,9 @@
-import p1 from "../assets/sk_logo.png"
-import p2 from "../assets/urb_logo.png"
-import p3 from "../assets/pict_logo.jpg"
-import p4 from "../assets/react.png"
-import p5 from "../assets/dice.png"
-import p6 from "../assets/openai.png"
+import p1 from "../../assets/sk_logo.png"
+import p2 from "../../assets/urb_logo.png"
+import p3 from "../../assets/pict_logo.jpg"
+import p4 from "../../assets/react.png"
+import p5 from "../../assets/dice.png"
+import p6 from "../../assets/openai.png"
 
 
 const ProjectCardData=[

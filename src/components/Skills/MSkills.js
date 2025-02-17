@@ -1,19 +1,20 @@
 import React from 'react'
 import "./MSkills.css"
-import In from "../assets/html.png"
-import php from "../assets/php.png"
-import react from "../assets/reactjs.png"
-import mysql from "../assets/mysql.png"
-import mongo from "../assets/mongo.png"
-import java from "../assets/java.png"
-import py from "../assets/python.png"
-import d from "../assets/d.png"
-import elk from "../assets/elk.png"
-import cpp from "../assets/cpp.png"
-import c from "../assets/c.png"
-import git from "../assets/git.png"
-import vs from "../assets/vs.png"
-import ij from "../assets/ij.png"
+import In from "../../assets/html.png"
+import php from "../../assets/php.png"
+import react from "../../assets/reactjs.png"
+import mysql from "../../assets/mysql.png"
+import mongo from "../../assets/mongo.png"
+import java from "../../assets/java.png"
+import py from "../../assets/python.png"
+import d from "../../assets/d.png"
+import elk from "../../assets/elk.png"
+import cpp from "../../assets/cpp.png"
+import c from "../../assets/c.png"
+import git from "../../assets/git.png"
+import vs from "../../assets/vs.png"
+import docker from "../../assets/docker.png"
+import node from "../../assets/node.png"
 
 
 import { FaLinkedin } from 'react-icons/fa'
@@ -39,7 +40,10 @@ const MSkills = () => {
         <img src={elk} alt="ELK"/> 
         <img src={git} alt="Github"/>   
         <img src={vs} alt="Visual Studio Code"/>   
-             
+        <img src={docker} alt="Visual Studio Code"/>
+        <img src={node} alt="Visual Studio Code"/>   
+   
+
 
 
            
