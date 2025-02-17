@@ -1,21 +1,35 @@
 .skills-main {
     margin-top: 5rem;
+    display: block;
   }
+
   .skills-container {
     margin-top: 3rem;
     padding: 1.5rem;
     display: flex;
     grid-template-columns: repeat(8, 1fr);
   }
+
   .skills-container img {
-    height: 6rem;
+    height: 5.5rem;
+    display: flex;
   }
+
   #skills-txt {
     margin-top: 5rem;
     color: lightslategray;
     margin-left: 2rem;
     font-size: 2rem;
   }
+
+  .for_more{
+    position:relative;
+    color:rgba(194, 185, 180, 0.881);
+    margin-left:90px;
+    margin-top:70px;
+    font-size:25px;
+  }
+
   @media (max-width: 600px) {
     .skills-main {
       margin-top: 3rem;
@@ -31,11 +45,5 @@
       font-size: 1rem;
     }
   }
-.for_more{
-  position:relative;
-  color:rgba(194, 185, 180, 0.881);
-  margin-left:90px;
-  margin-top:70px;
-  font-size:25px;
-}
+
   

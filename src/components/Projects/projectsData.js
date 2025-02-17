@@ -6,7 +6,7 @@ import p5 from "../../assets/dice.png"
 import p6 from "../../assets/openai.png"
 
 
-const ProjectCardData=[
+const ProjectsData=[
     {
         imgsrc: p3,
         title:"PICT ChatBot Project",
@@ -54,5 +54,5 @@ const ProjectCardData=[
 
 ];
 
-export default ProjectCardData;
+export default ProjectsData;
 

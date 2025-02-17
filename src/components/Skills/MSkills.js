@@ -25,23 +25,22 @@ const MSkills = () => {
     
         <div className="skills-main">
         <strong id="skills-txt">Skills & Tools</strong>
-        <div className="skills-container">
-        
+        <div className="skills-container">        
         <img src={c} alt="C"/>
         <img src={cpp} alt="CPP"/>
         <img src={java} alt="JAVA"/>
         <img src={py} alt="PYTHON"/>
         <img src={In} alt="HTML"/>
         <img src={php} alt="PHP"/>
-        <img src={react} alt="REACT"/>
-        <img src={mysql} alt="MYSQL"/>
-        <img src={mongo} alt="MONGO"/>  
-        <img src={d} alt="DIALOG FLOW"/>
+        <img src={react} alt="react"/>
+        <img src={mysql} alt="MySql"/>
+        <img src={mongo} alt="MongoDB"/>  
+        <img src={d} alt="Dialog Flow"/>
         <img src={elk} alt="ELK"/> 
         <img src={git} alt="Github"/>   
         <img src={vs} alt="Visual Studio Code"/>   
-        <img src={docker} alt="Visual Studio Code"/>
-        <img src={node} alt="Visual Studio Code"/>   
+        <img src={docker} alt="Docker"/>
+        <img src={node} alt="NodeJs"/>   
    
 
 

@@ -1,8 +1,8 @@
-import "./word.css";
+import "./experience.css";
 import React from 'react';
 import { NavLink } from "react-router-dom";
 
-const WordCard = (props) => {
+const ExperienceCard = (props) => {
   return (
     <div className="project-card">
             <img src={props.imgsrc} alt="image" />
@@ -10,12 +10,12 @@ const WordCard = (props) => {
             <div className="pro-details">
                 <p>{props.text}</p>
                 <div className="pro-btns">
-                 <NavLink to={props.view} className="btn">Certificate</NavLink>
-                 <NavLink to={props.source} className="btn">Link</NavLink>   
+                <NavLink to="#" className="btn" onClick={() => window.open(props.view, "_blank", "noopener,noreferrer")}>Certificate</NavLink>
+                <NavLink to="#" className="btn" onClick={() => window.open(props.view, "_blank", "noopener,noreferrer")}>Link</NavLink>
                 </div>
             </div>
         </div>
   )
 }
 
-export default WordCard
+export default ExperienceCard

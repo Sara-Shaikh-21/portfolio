@@ -1,16 +1,16 @@
-import "./word.css";
+import "./experience.css";
 import React from 'react';
-import WordCard from "./wordCard";
-import WordCardData from "./wordCardData";
+import ExperienceCard from "./experienceCard";
+import ExperienceData from "./experienceData";
 
-const Word = () => {
+const Experience = () => {
   return (
     <div className="Work-container">
-    <h1 className="project-heading">Internships</h1>
+    <h1 className="project-heading">Work History</h1>
     <div className="project-container">
-        {WordCardData.map((val,ind)=>{
+        {ExperienceData.map((val,ind)=>{
             return (
-                <WordCard 
+                <ExperienceCard 
                     key={ind}
                     imgsrc={val.imgsrc}
                     title={val.title}
@@ -25,4 +25,4 @@ const Word = () => {
   )
 }
 
-export default Word
+export default Experience
