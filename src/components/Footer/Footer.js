@@ -33,7 +33,7 @@ const Footer = () => {
         <h4> About Myself
         </h4>
 
-        <p>I am a 3rd Year Undergrad student at Pune Institue of Computer Technology. </p>
+        <p>I am an Associate Software Engineer </p>
         <br></br>
         <div className="socials"><br></br>
         <a href="https://www.linkedin.com/in/sara-shaikh/" target="_blank"><FaLinkedin size={30} style={{color:"#fff" ,marginRight:"1rem"}} /></a>

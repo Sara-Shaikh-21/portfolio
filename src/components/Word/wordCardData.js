@@ -1,8 +1,8 @@
-import p1 from "../assets/amtek_logog.jpg"
-import p2 from "../assets/app_logo.png"
-import p3 from "../assets/reb_logo.png"
-import p4 from "../assets/barclays.png"
-import pro3 from "../assets/bg1.jpg"
+import p1 from "../../assets/amtek_logog.jpg"
+import p2 from "../../assets/app_logo.png"
+import p3 from "../../assets/reb_logo.png"
+import p4 from "../../assets/barclays.png"
+import pro3 from "../../assets/bg1.jpg"
 
 
 const ProjectCardData=[
