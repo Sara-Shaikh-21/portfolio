@@ -39,7 +39,7 @@ const Footer = () => {
         <a href="https://www.linkedin.com/in/sara-shaikh/" target="_blank"><FaLinkedin size={30} style={{color:"#fff" ,marginRight:"1rem"}} /></a>
         <a href="https://github.com/Sara-Shaikh-21/" target="_blank"><FaGithub size={30} style={{color:"#fff" ,marginRight:"1rem"}}/></a>
         
-        <a href="https://www.instagram.com/sara.shaikh.21/" target="_blank"><FaInstagram size={30} style={{color:"#fff" ,marginRight:"1rem"}}/></a>
+        {/* <a href="https://www.instagram.com/sara.shaikh.21/" target="_blank"><FaInstagram size={30} style={{color:"#fff" ,marginRight:"1rem"}}/></a> */}
         <a href="https://www.facebook.com/sara.shaikh.21/" target="_blank"><FaFacebook size={30} style={{color:"#fff" ,marginRight:"1rem"}}/></a>
 
         <a href="https://twitter.com/sara_shaikh_21" target="_blank"><FaTwitter size={30} style={{color:"#fff" ,marginRight:"1rem"}}/></a>

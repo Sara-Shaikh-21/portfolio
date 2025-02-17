@@ -1,17 +1,17 @@
-import "./WorkCardStyles.css";
+import "./projects.css";
 import React from 'react';
-import WorkCard from "./WorkCard";
-import WordCardData from "./WorkCardData";
+import ProjectsCard from "./projectsCard";
+import ProjectsData from "./projectsData";
 
-const Work = () => {
+const Projects = () => {
   return (
     <div className="Work-container">
     <h1 className="projects-heading">Projects</h1>
     <div className="project-container">
         {
-          WordCardData.map((val,ind)=>{
+          ProjectsData.map((val,ind)=>{
             return (
-                <WorkCard 
+                <ProjectsCard 
                     key={ind}
                     imgsrc={val.imgsrc}
                     title={val.title}
@@ -26,4 +26,4 @@ const Work = () => {
   )
 }
 
-export default Work
+export default Projects
