@@ -1,18 +1,18 @@
 import React from 'react'
 import Navbar from "../components/Navbar/Navbar.js";
-import HeroImg from "../components/Hero Image/HeroImg.js";
+import Home from "../components/HomePage/HomePage.js";
 import Footer from "../components/Footer/Footer.js";
 import AboutContent from '../components/AboutContent/AboutContent.js';
 import Skills from '../components/Skills/MSkills.js';
 // use rafce to create dummmy structure
 
 
-const home = () => {
+const HomeRoute = () => {
   return (
     <div>
 
     <Navbar/>
-    <HeroImg />
+    <Home />
     <AboutContent/>
     <Skills /><br></br>
     <Footer />
@@ -21,4 +21,4 @@ const home = () => {
   )
 }
 
-export default home
+export default HomeRoute
