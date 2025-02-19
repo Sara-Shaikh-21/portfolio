@@ -1,26 +1,73 @@
-.ehist{
-    /* display: block; */
+/* Main container */
+.ehist {
     background-color: rgba(122, 112, 107, 0.881);
-    align-items: center;
-    height:21rem;
-    width: 100px;
-    text-align:center;
-    padding:2rem;
-    margin: 100px;
-    width:1000px;
-    font-size: 1.3rem;
-    position: inherit;
+    color: rgb(15, 14, 14);
+    text-align: center;
+    padding: 2rem;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 800px;
+    /* Limits max width for large screens */
+    border-radius: 12px;
     display: flex;
-    justify-content: center;
-    border-radius: 12px;
+    flex-direction: column;
+    align-items: center;
 }
 
-.UL_for_ED{
-    text-align: left;
-    transition-property: all;
+/* Text styling */
+.ehist h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* List container */
+.UL_for_ED {
     background-color: beige;
-    padding: 2rem ;
-    opacity: 0.6;
+    padding: 1.5rem;
+    opacity: 0.9;
     border-radius: 12px;
+    text-align: left;
+    width: 100%;
+    max-width: 700px;
+    font-size: 1.2rem;
 }
 
+/* List items */
+.UL_for_ED li {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .ehist {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .ehist h1 {
+        font-size: 1.5rem;
+    }
+
+    .UL_for_ED {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ehist {
+        width: 100%;
+        padding: 1rem;
+        margin: 20px auto;
+    }
+
+    .ehist h1 {
+        font-size: 1.3rem;
+    }
+
+    .UL_for_ED {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}
