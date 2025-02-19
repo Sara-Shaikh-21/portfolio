@@ -1,12 +1,14 @@
-/* Prevent horizontal scroll */
+/* Global Fix: Prevent horizontal scroll on entire page */
 html,
 body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 100vw;
+    position: relative;
 }
 
+/* Main hero section */
 .hero {
     position: relative;
     width: 100vw;
@@ -18,16 +20,19 @@ body {
     overflow: hidden;
 }
 
+/* Fixing image to prevent overflow */
 .into-img {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+    max-width: 100%;
 }
 
+/* Centered content box */
 .hero .content {
     position: absolute;
     top: 50%;
@@ -44,6 +49,7 @@ body {
     /* Ensures padding doesn't add extra width */
 }
 
+/* Text styles */
 .hero .content .heading-para {
     font-size: 1.5rem;
     font-weight: bold;
@@ -57,16 +63,19 @@ body {
     letter-spacing: 1.5px;
 }
 
+/* Buttons */
 .content .btn {
     margin: 1rem 0.5rem;
     padding: 10px 20px;
     font-size: 1rem;
 }
 
-/* Responsive Fixes */
+/* 🟢 Mobile-Friendly Fixes */
 @media screen and (max-width: 768px) {
     .hero {
         height: 80vh;
+        width: 100vw;
+        /* Ensures it doesn't exceed screen width */
     }
 
     .hero .content {
@@ -88,9 +97,11 @@ body {
     }
 }
 
+/* 🔹 For very small screens */
 @media screen and (max-width: 480px) {
     .hero {
         height: 70vh;
+        width: 100vw;
     }
 
     .hero .content {
