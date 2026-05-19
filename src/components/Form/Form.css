@@ -1,133 +1,196 @@
-/* Center the form */
+/* Main Container */
 .form-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #1e1e1e;
+
     padding: 2rem;
+
+    background: #0f0f0f;
     box-sizing: border-box;
 }
 
-/* Form structure */
+/* Form Card */
 form {
+    width: 100%;
+    max-width: 650px;
+
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 500px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
+
+    padding: 2.5rem;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s ease;
 }
 
-/* Labels */
-label {
-    color: #fff;
-    margin-bottom: 0.5rem;
+form:hover {
+    transform: translateY(-5px);
+}
+
+/* Heading Feel */
+form label {
+    color: #ffffff;
+
+    margin-bottom: 0.6rem;
+    margin-top: 0.8rem;
+
     font-size: 1rem;
     font-weight: 600;
+
+    letter-spacing: 0.5px;
 }
 
-/* Inputs and Textarea */
+/* Inputs */
 form input,
 form textarea {
     width: 100%;
-    padding: 12px;
+
+    padding: 14px;
+
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    background: rgba(255, 255, 255, 0.06);
+
+    color: #ffffff;
+
     font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    margin-bottom: 1rem;
+
     outline: none;
+
+    transition: 0.3s ease;
+
+    margin-bottom: 1rem;
+
     box-sizing: border-box;
 }
 
-/* Placeholder styling */
-form input::placeholder,
-form textarea::placeholder {
-    color: #ccc;
+/* Input Focus */
+form input:focus,
+form textarea:focus {
+    border-color: #ffd369;
+
+    box-shadow: 0 0 10px rgba(255, 211, 105, 0.3);
+
+    background: rgba(255, 255, 255, 0.09);
 }
 
-/* Button Styling */
+/* Placeholder */
+form input::placeholder,
+form textarea::placeholder {
+    color: #cfcfcf;
+}
+
+/* Button */
 .btn {
-    background: #007bff;
-    color: white;
-    padding: 12px;
-    font-size: 1rem;
+    margin-top: 1rem;
+
+    background: #ffd369;
+    color: #111;
+
     border: none;
-    border-radius: 8px;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    font-size: 1rem;
+    font-weight: 700;
+
     cursor: pointer;
-    transition: background 0.3s ease;
+
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: #0056b3;
+    background: #ffe29a;
+
+    transform: scale(1.02);
+}
+
+/* Social Section */
+.socials {
+    margin-top: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    /* gap: 1.5rem; */
 }
 
 /* Social Icons */
-.socials {
-    display: flex;
-    justify-content: center;
-}
-
 .socials a {
-    color: white;
-    transition: transform 0.3s ease;
+    color: #ffffff;
+
+    transition: all 0.3s ease;
 }
 
 .socials a:hover {
-    transform: scale(1.1);
+    color: #ffd369;
+
+    transform: translateY(-5px) scale(1.1);
 }
 
-/* 🔹 Responsive Design */
-@media (max-width: 768px) {
-    .form-container {
-        padding: 1.5rem;
-    }
-
+/* Responsive */
+@media screen and (max-width: 768px) {
     form {
-        padding: 1.5rem;
-    }
-
-    .btn {
-        font-size: 0.9rem;
-        padding: 10px;
+        padding: 2rem;
     }
 
     .socials {
-        gap: 0.5rem;
+        gap: 1rem;
     }
 
     .socials a svg {
-        width: 35px;
-        height: 35px;
+        width: 38px;
+        height: 38px;
     }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .form-container {
         padding: 1rem;
     }
 
     form {
-        width: 95%;
-        padding: 1.2rem;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    form label {
+        font-size: 0.95rem;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.95rem;
+        padding: 12px;
     }
 
     .btn {
-        font-size: 0.4rem;
-        padding: 8px;
+        padding: 12px;
+        font-size: 0.95rem;
     }
 
     .socials {
-        gap: 0.5rem;
+        gap: 0.8rem;
     }
 
     .socials a svg {
-        width: 30px;
-        height: 30px;
+        width: 32px;
+        height: 32px;
     }
 }

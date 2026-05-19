@@ -1,73 +1,95 @@
-/* Main container */
-.ehist {
-    background-color: rgba(122, 112, 107, 0.881);
-    color: rgb(15, 14, 14);
-    text-align: center;
-    padding: 2rem;
-    margin: 50px auto;
+.education-container {
     width: 90%;
-    max-width: 800px;
-    /* Limits max width for large screens */
-    border-radius: 12px;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.education-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* Education Card */
+.education-card {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    padding: 25px;
+    margin-bottom: 25px;
+
+    border-radius: 18px;
+
+    transition: 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Text styling */
-.ehist h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
 }
 
-/* List container */
-.UL_for_ED {
-    background-color: beige;
-    padding: 1.5rem;
-    opacity: 0.9;
-    border-radius: 12px;
-    text-align: left;
-    width: 100%;
-    max-width: 700px;
-    font-size: 1.2rem;
+/* Icon */
+.edu-icon {
+    font-size: 3rem;
+    min-width: 70px;
+    text-align: center;
 }
 
-/* List items */
-.UL_for_ED li {
-    margin-bottom: 1rem;
-    line-height: 1.5;
+/* Text Content */
+.edu-content h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .ehist {
-        width: 95%;
-        padding: 1.5rem;
+.edu-content h3 {
+    color: #ffd369;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.edu-content p {
+    color: #d6d6d6;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .education-card {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .ehist h1 {
-        font-size: 1.5rem;
+    .education-title {
+        font-size: 2rem;
     }
 
-    .UL_for_ED {
-        font-size: 1rem;
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .ehist {
-        width: 100%;
-        padding: 1rem;
-        margin: 20px auto;
-    }
-
-    .ehist h1 {
+    .edu-content h2 {
         font-size: 1.3rem;
     }
+}
 
-    .UL_for_ED {
+@media screen and (max-width: 480px) {
+    .education-title {
+        font-size: 1.7rem;
+    }
+
+    .education-card {
+        padding: 18px;
+    }
+
+    .edu-content p {
         font-size: 0.9rem;
-        padding: 0.8rem;
     }
 }

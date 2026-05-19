@@ -1,16 +1,51 @@
-import React from 'react';
+import React from "react";
 import "./EducationData.css";
-// use rafce to create dummmy structure
+
 const EducationData = () => {
   return (
-    <div className="ehist"><h1>My Education history:</h1><br></br>
-      <ul className='UL_for_ED'>
-        <li>Bachelors In Computer Engineering :- Pune Institute Of Computer Technology.</li><br></br>
-        <li>Diploma In Computer Engineering :- Cusrow Wadia Institute of Computer Technology.</li><br></br>
-        <li>SSC :- Sardar Dastur Girl's High School.</li>
-      </ul>
+    <div className="education-container">
+      <h1 className="education-title">My Education Journey</h1>
+
+      <div className="education-card">
+        <div className="edu-icon">🎓</div>
+
+        <div className="edu-content">
+          <h2>Bachelor's in Computer Engineering</h2>
+          <h3>Pune Institute Of Computer Technology</h3>
+          <p>
+            Pursuing Computer Engineering with focus on Full Stack Development,
+            Software Engineering, and Problem Solving.
+          </p>
+        </div>
+      </div>
+
+      <div className="education-card">
+        <div className="edu-icon">💻</div>
+
+        <div className="edu-content">
+          <h2>Diploma in Computer Engineering</h2>
+          <h3>Cusrow Wadia Institute of Technology</h3>
+          <p>
+            Built strong fundamentals in programming, databases, networking,
+            and software development.
+          </p>
+        </div>
+      </div>
+
+      <div className="education-card">
+        <div className="edu-icon">📚</div>
+
+        <div className="edu-content">
+          <h2>SSC</h2>
+          <h3>Sardar Dastur Girls' High School</h3>
+          <p>
+            Completed schooling with emphasis on academics and extracurricular
+            activities.
+          </p>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default EducationData;

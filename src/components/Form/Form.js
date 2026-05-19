@@ -14,7 +14,8 @@ const Form = () => {
         <label>Subject: </label>
         <input type="text"></input>
         <label>Message: </label>
-        <textarea rows="6" placeholder="Type your message here..">
+        <textarea rows="6" rel="noreferrer" target="_blank"
+          placeholder="Type your message here..">
         </textarea>
 
         <button className="btn">Submit</button>

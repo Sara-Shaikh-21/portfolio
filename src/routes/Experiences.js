@@ -10,10 +10,10 @@ import Experience from '../components/Experience/experience'
 const Experiences = () => {
   return (
     <div>
-    <Navbar/>
-    <HeroImg2 heading="Work Experiences" text="Some of my potential contributions."/>
-    <Experience />
-    <Footer />
+      <Navbar />
+      {/* <HeroImg2 heading="Work Experiences" text="Some of my potential contributions."/> */}
+      <Experience />
+      <Footer />
     </div>
   )
 }

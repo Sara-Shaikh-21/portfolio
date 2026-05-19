@@ -7,11 +7,11 @@ import HeroImg2 from '../components/Hero Image 2/HeroImg2'
 const Education = () => {
   return (
     <div>
-        <Navbar/>
-        <HeroImg2 heading="My Educational Details" text="I have studied in some of the prestigious schools and colleges in Pune!" />
+      <Navbar />
+      <HeroImg2 heading="My Educational Details" text="I have studied in some of the prestigious schools and colleges in Pune!" />
 
-        <EducationData />
-        <Footer />
+      <EducationData />
+      <Footer />
     </div>
   )
 }
