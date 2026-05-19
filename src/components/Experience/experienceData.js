@@ -30,7 +30,7 @@ const ExperienceData = [
         ],
 
         view:
-            "https://drive.google.com/file/d/12a8b7XOihz5OYbTjPHYv-eVqzvB3OxYf/view?usp=sharing",
+            "https://www.rebert.in",
 
     },
 
@@ -60,7 +60,7 @@ const ExperienceData = [
         ],
 
         view:
-            "https://drive.google.com/file/d/12a8b7XOihz5OYbTjPHYv-eVqzvB3OxYf/view?usp=sharing",
+            "https://drive.google.com/file/d/1KMhJZyC3LWXFdGnJ1lXszpYp9Q6LvAGB/view?usp=sharing",
 
 
     },
@@ -93,6 +93,62 @@ const ExperienceData = [
 
     },
 
+
+
+
+    {
+        imgsrc: p3,
+
+        title: "Rebert Technologies Pvt. Ltd.",
+
+        role: "MERN Stack Intern",
+
+        duration: "Oct 2022 - Dec 2022",
+
+        text:
+            "Learned the fundamentals of MERN stack development by completing hands-on daily assignments and mini-projects including registration systems and frontend interfaces. Built a strong foundation in full stack web development.",
+
+        tech: [
+            "MongoDB",
+            "Express.js",
+            "React.js",
+            "Node.js",
+            "JavaScript",
+            "Frontend Development",
+        ],
+
+        view:
+            "https://drive.google.com/file/d/1qSKgovn3LnVETX9zHH9YBqs5XFrnLBhz/view?usp=sharing",
+
+
+    },
+
+    {
+        imgsrc: p2,
+
+        title: "AppMandi LLC",
+
+        role: "Freelance Web Developer",
+
+        duration: "Dec 2021 - Feb 2022",
+
+        text:
+            "Designed and developed a client website using WordPress by analyzing user requirements and implementing responsive UI features. Worked closely on functionality customization, website structure, and deployment.",
+
+        tech: [
+            "WordPress",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Responsive Design",
+            "UI Development",
+        ],
+
+        view: "https://drive.google.com/file/d/1Hf9H7_V59TQB1hXvSMTRn3lk_aR3v_gi/view?usp=sharing",
+
+
+    },
+
     {
         imgsrc: p1,
 
@@ -100,7 +156,7 @@ const ExperienceData = [
 
         role: "Software Development Intern",
 
-        duration: "July 2021",
+        duration: "April 2021 - July 2021",
 
         text:
             "Contributed to the Training and Competency Management System named Skill Space. Developed features that enabled management authorities to track trainee progress, evaluate competency levels, and streamline training workflows through an interactive web platform.",
@@ -120,58 +176,6 @@ const ExperienceData = [
 
     },
 
-    {
-        imgsrc: p2,
-
-        title: "AppMandi LLC",
-
-        role: "Freelance Web Developer",
-
-        duration: "2022",
-
-        text:
-            "Designed and developed a client website using WordPress by analyzing user requirements and implementing responsive UI features. Worked closely on functionality customization, website structure, and deployment.",
-
-        tech: [
-            "WordPress",
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Responsive Design",
-            "UI Development",
-        ],
-
-        view: "https://www.appmand1.com/",
-
-
-    },
-
-    {
-        imgsrc: p3,
-
-        title: "Rebert Technologies Pvt. Ltd.",
-
-        role: "MERN Stack Trainee",
-
-        duration: "2021",
-
-        text:
-            "Learned the fundamentals of MERN stack development by completing hands-on daily assignments and mini-projects including registration systems and frontend interfaces. Built a strong foundation in full stack web development.",
-
-        tech: [
-            "MongoDB",
-            "Express.js",
-            "React.js",
-            "Node.js",
-            "JavaScript",
-            "Frontend Development",
-        ],
-
-        view:
-            "https://drive.google.com/file/d/1pgOM9an4TpBWr1xUR-DDL1X8eFCQPiFv/view?usp=sharing",
-
-
-    },
 ];
 
 export default ExperienceData;
