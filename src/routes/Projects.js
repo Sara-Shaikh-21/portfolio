@@ -8,10 +8,10 @@ import Projects from '../components/Projects/projects.js';
 const ProjectsRoute = () => {
   return (
     <div>
-    <Navbar/>
-    <HeroImg2 heading="Projects" text="Some of my recent projects."/>
-    <Projects />
-    <Footer />
+      <Navbar />
+      {/* <HeroImg2 heading="Projects" text="Some of my recent projects."/> */}
+      <Projects />
+      <Footer />
 
     </div>
   )
