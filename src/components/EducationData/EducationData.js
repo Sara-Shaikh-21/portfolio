@@ -13,7 +13,7 @@ const EducationData = () => {
           <h2>Bachelor's in Computer Engineering</h2>
           <h3>Pune Institute Of Computer Technology</h3>
           <p>
-            Pursuing Computer Engineering with focus on Full Stack Development,
+            Completed Computer Engineering with focus on Full Stack Development,
             Software Engineering, and Problem Solving.
           </p>
         </div>
@@ -26,7 +26,7 @@ const EducationData = () => {
           <h2>Diploma in Computer Engineering</h2>
           <h3>Cusrow Wadia Institute of Technology</h3>
           <p>
-            Built strong fundamentals in programming, databases, networking,
+            Built strong fundamentals in core programming, databases, networking,
             and software development.
           </p>
         </div>
