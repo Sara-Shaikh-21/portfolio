@@ -6,9 +6,34 @@ import p5 from "../../assets/dice.png";
 import p6 from "../../assets/openai.png";
 import p7 from "../../assets/Sticky_Notes.png";
 import p8 from "../../assets/game2048.png";
-
+import p9 from "../../assets/commerceAI.avif";
 
 const ProjectsData = [
+    {
+        imgsrc: p9,
+
+        title: "AI-Customer-Support-Agent",
+
+        text:
+            "Built a multi-agent AI customer support platform using Azure AI Foundry. Implemented an AI-driven router that dynamically delegated user requests to specialized Shopping, Order, Refund, and Support agents, each with dedicated prompts and tool access.",
+
+        tech: [
+            "Azure OpenAI",
+            "Azure AI Foundry ",
+            "Azure Cosmos DB",
+            "Azure Container App",
+            "Azure Static Web App",
+            "Swagger",
+            "Open AI"
+        ],
+
+        view: "https://orange-forest-0012be30f.7.azurestaticapps.net/",
+
+        source: "https://github.com/Sara-Shaikh-21/AI-Customer-Support-Agent",
+    },
+
+
+
 
     {
         imgsrc: p7,
