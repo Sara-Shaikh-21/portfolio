@@ -4,8 +4,39 @@ import p3 from "../../assets/reb_logo.png";
 import p4 from "../../assets/barclays.png";
 import p5 from "../../assets/berkadia_logo.jpeg";
 import p6 from "../../assets/rebert logo.png";
+import p7 from "../../assets/rare.jpeg";
 
 const ExperienceData = [
+    {
+        imgsrc: p7,
+
+        title: "RareNext Private Limited",
+
+        role: "Application Developer",
+
+        duration: "June 2026 - Present",
+
+        text:
+            " Developing frontend screens for a Flutter mobile application using Dart, reusable widgets, responsive layouts, and navigation while collaborating with the existing codebase and design specifications.",
+
+        tech: [
+            "Flutter",
+            "Dart",
+            "Material Design",
+            "Responsive UI",
+            "Widget Composition",
+            "Navigation",
+            "Git",
+            "Collaboration",
+        ],
+
+        view:
+            "https://www.relaxedandrefresh.com/",
+
+    },
+
+
+
     {
         imgsrc: p6,
 
