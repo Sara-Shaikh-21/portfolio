@@ -24,7 +24,8 @@ const ProjectsData = [
             "Azure Container App",
             "Azure Static Web App",
             "Swagger",
-            "Open AI"
+            "Open AI",
+            "Vite"
         ],
 
         view: "https://orange-forest-0012be30f.7.azurestaticapps.net/",
