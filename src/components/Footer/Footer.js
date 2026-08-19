@@ -26,7 +26,7 @@ const Footer = () => {
           <div className="email">
             <h4><br></br>
               <FaMailBulk size={20} style={{ color: "#fff", marginRight: "2rem" }} />
-              sarassk21@gmail.com
+              sarassk21@gmail.com || sarassk21.tech@gmail.com
             </h4>
 
           </div>

@@ -42,7 +42,7 @@ const ProjectsData = [
         title: "Sticky Notes Service App",
 
         text:
-            "Backend focused application for a multi-user notes service. Think backend server for Google Keep or Apple Notes. It should expose REST APIs to manage users and their personal notes. The primary features should include: ● New User Registration ● User authentication (Login) ● Creating, reading, updating, and deleting notes ● Sharing a note with another user",
+            "Backend focused application for a multi-user notes service. Think backend server for Google Keep or Apple Notes. It should expose REST APIs to manage users and their personal notes. The primary features should include: ● New User Registration ● User authentication (Login) ● Creating, reading, updating, and deleting notes ● Sharing a note with another user.",
 
         tech: [
             "DialogFlow",
