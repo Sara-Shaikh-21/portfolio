@@ -1,59 +1,187 @@
+
 import "./Footer.css";
-import React from 'react'
-import { FaHome, FaPhone, FaMailBulk, FaTwitter, FaFacebook, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa"
-// import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import {
+  FaHome,
+  FaMailBulk,
+  FaLinkedin,
+  FaGithub,
+  FaFacebook,
+  FaTwitter,
+  FaArrowUp,
+  FaCopy,
+  FaCheck,
+} from "react-icons/fa";
 
 const Footer = () => {
-  return (
-    <div className="footer">
-      <div className="footer-container">
-        <div className="left">
+  const [copied, setCopied] = useState(false);
 
-          <div className="location">
-            <FaHome size={20} style={{ color: "#fff", marginRight: "2rem" }} />
+  const email = "sarassk21@gmail.com";
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+
+      setTimeout(() => {
+        setCopied(false);
+      }, 2000);
+    } catch (error) {
+      console.error("Failed to copy email:", error);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="footer">
+      <div className="footer-container">
+
+        {/* LEFT */}
+        <div className="footer-left">
+
+          <div className="footer-heading">
+            <span className="footer-symbol">&lt;/&gt;</span>
+            <h3>Let's Connect</h3>
+          </div>
+
+          <p className="footer-intro">
+            Have a project, opportunity, or just want to say hello?
+            I'd love to hear from you.
+          </p>
+
+          {/* Location */}
+          <div className="footer-contact-item">
+            <div className="footer-icon">
+              <FaHome />
+            </div>
+
             <div>
+              <span className="contact-label">Location</span>
               <p>Pune, Maharashtra, India</p>
             </div>
           </div>
 
-          {/* <div className="phone">
-            <FaPhone size={20} style={{ color: "#fff", marginRight: "2rem" }} />
-            <div>
-              <p>+91 72101*****</p>
+          {/* Email */}
+          <div className="footer-contact-item">
+            <div className="footer-icon">
+              <FaMailBulk />
             </div>
-          </div> */}
 
-          <div className="email">
-            <h4><br></br>
-              <FaMailBulk size={20} style={{ color: "#fff", marginRight: "2rem" }} />
-              sarassk21@gmail.com || sarassk21.tech@gmail.com
-            </h4>
+            <div className="email-content">
+              <span className="contact-label">Email</span>
 
+              <a href={`mailto:${email} `}>
+                {email}
+              </a>
+
+              <button
+                className="copy-email-btn"
+                onClick={copyEmail}
+                aria-label="Copy email address"
+                title="Copy email"
+              >
+                {copied ? <FaCheck /> : <FaCopy />}
+              </button>
+            </div>
           </div>
+
         </div>
 
-        <div className="right">
-          <h4> About Myself
-          </h4>
+        {/* RIGHT */}
+        <div className="footer-right">
 
-          <p>I am an Associate Software Engineer </p>
-          <br></br>
-          <div className="socials"><br></br>
-            <a href="https://www.linkedin.com/in/sara-shaikh/" target="_blank"><FaLinkedin size={30} style={{ color: "#fff", marginRight: "1rem" }} /></a>
-            <a href="https://github.com/Sara-Shaikh-21/" target="_blank"><FaGithub size={30} style={{ color: "#fff", marginRight: "1rem" }} /></a>
+          <h3>About Me</h3>
 
-            {/* <a href="https://www.instagram.com/sara.shaikh.21/" target="_blank"><FaInstagram size={30} style={{color:"#fff" ,marginRight:"1rem"}}/></a> */}
-            <a href="https://www.facebook.com/sara.shaikh.21/" target="_blank"><FaFacebook size={30} style={{ color: "#fff", marginRight: "1rem" }} /></a>
+          <p>
+            Associate Software Engineer passionate about building
+            modern web applications, AI-powered solutions, and
+            meaningful digital experiences.
+          </p>
 
-            <a href="https://twitter.com/sara_shaikh_21" target="_blank"><FaTwitter size={30} style={{ color: "#fff", marginRight: "1rem" }} /></a>
-            <a href="mailto: sarassk21@gmail.com" target="_blank"><FaMailBulk size={30} style={{ color: "#fff", marginRight: "1rem" }} /></a>
+          {/* Social Links */}
+          <div className="socials">
+
+            <a
+              href="https://www.linkedin.com/in/sara-shaikh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
+
+            <a
+              href="https://github.com/Sara-Shaikh-21/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              title="GitHub"
+            >
+              <FaGithub />
+            </a>
+
+            <a
+              href="https://www.facebook.com/sara.shaikh.21/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              title="Facebook"
+            >
+              <FaFacebook />
+            </a>
+
+            <a
+              href="https://twitter.com/sara_shaikh_21"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+              title="Twitter"
+            >
+              <FaTwitter />
+            </a>
+
+            <a
+              href={`mailto:${email} `}
+              aria-label="Send Email"
+              title="Email Me"
+            >
+              <FaMailBulk />
+            </a>
 
           </div>
 
         </div>
       </div>
-    </div >
-  )
-}
 
-export default Footer
+      {/* Bottom */}
+      <div className="footer-bottom">
+
+        <p>
+          © {currentYear} Sara Shaikh. Built with React.
+        </p>
+
+        <button
+          className="back-to-top"
+          onClick={scrollToTop}
+          aria-label="Back to top"
+          title="Back to top"
+        >
+          <FaArrowUp />
+        </button>
+
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
+

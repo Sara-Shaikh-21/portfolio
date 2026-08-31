@@ -1,43 +1,98 @@
-.hero-img{
-    width:100%;
-    background:rgb(0,0,0,0.5);
-    height:60vh;
+.hero-img {
+    width: 100%;
+    height: 50vh;
+    min-height: 320px;
     position: relative;
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
 
-.hero-img::before{
-    content:"";
-    background:url("../../assets/Grey.jpeg");
-    background-size: cover;
-    background-position: center top;
-    height:100%;
-    width:100%;
-    position:absolute;
-    top:0;
-    left:0;
-    z-index: -1;
+/* subtle grid pattern instead of a photo */
+.hero-img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--border-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.35;
+    z-index: 0;
 }
 
-.heading{
-    width:100%;
-    height:100%;
-    display:flex;
-    flex-direction:column;
+/* fade to dark at edges so the grid doesn't compete with text */
+.hero-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 0%, var(--bg-secondary) 80%);
+    z-index: 0;
+}
+
+.heading {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0.75rem;
+    padding: 0 1.5rem;
+    text-align: center;
 }
 
-.hero-img h1{
-    font-size:2.4rem;
+.hero-terminal-line {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.hero-img p{
-    font-size:1.4rem;
-    text-align:center;
+.hero-prompt {
+    color: var(--accent);
 }
 
-@media screen and(max-width:640px){
-    .hero-img h1{
-        font-size:2rem; 
+.hero-command {
+    color: var(--text-primary);
+    border-right: 2px solid var(--accent);
+    padding-right: 4px;
+    animation: blink-caret 1s step-end infinite;
+}
+
+@keyframes blink-caret {
+
+    0%,
+    100% {
+        border-color: var(--accent);
+    }
+
+    50% {
+        border-color: transparent;
+    }
+}
+
+.hero-img h1 {
+    font-family: var(--font-mono);
+    font-size: clamp(1.6rem, 4vw + 0.5rem, 2.6rem);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.hero-img p {
+    font-size: clamp(0.95rem, 1.5vw + 0.5rem, 1.25rem);
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0;
+}
+
+@media screen and (max-width: 640px) {
+    .hero-img {
+        height: 40vh;
+        min-height: 260px;
     }
 }

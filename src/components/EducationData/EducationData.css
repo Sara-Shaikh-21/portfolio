@@ -53,7 +53,7 @@
 }
 
 .edu-content h3 {
-    color: #ffd369;
+    color: var(--accent);
     margin-bottom: 12px;
     font-weight: 500;
 }

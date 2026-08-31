@@ -78,7 +78,7 @@ form textarea {
 /* Input Focus */
 form input:focus,
 form textarea:focus {
-    border-color: #ffd369;
+    border-color: var(--accent);
 
     box-shadow: 0 0 10px rgba(255, 211, 105, 0.3);
 
@@ -95,7 +95,7 @@ form textarea::placeholder {
 .btn {
     margin-top: 1rem;
 
-    background: #ffd369;
+    background: var(--accent);
     color: #111;
 
     border: none;
@@ -139,7 +139,7 @@ form textarea::placeholder {
 }
 
 .socials a:hover {
-    color: #ffd369;
+    color: var(--accent);
 
     transform: translateY(-5px) scale(1.1);
 }

@@ -29,7 +29,7 @@ const Projects = () => {
 
           return (
             <div className="project-card" key={index}>
-              <img src={project.imgsrc} alt={project.title} />
+              <img src={project.imgsrc} alt={`${project.title} preview`} />
 
               <div className="project-content">
                 <div className="project-title-row">
@@ -40,6 +40,7 @@ const Projects = () => {
                       href={project.view}
                       target="_blank"
                       rel="noreferrer"
+                      aria-label={`View live demo of ${project.title}`}
                     >
                       <FaArrowUpRightFromSquare />
                     </a>
@@ -48,6 +49,7 @@ const Projects = () => {
                       href={project.source}
                       target="_blank"
                       rel="noreferrer"
+                      aria-label={`View source code of ${project.title}`}
                     >
                       <FaGithub />
                     </a>
@@ -58,26 +60,31 @@ const Projects = () => {
                   {isExpanded ? project.text : shortText}
                 </p>
 
-                {project.text.length > 180 && (
-                  <button
-                    className="read-more-btn"
-                    onClick={() => toggleReadMore(index)}
-                  >
-                    {isExpanded ? "Show Less" : "Read More"}
-                  </button>
-                )}
+                {
+                  project.text.length > 180 && (
+                    <button
+                      className="read-more-btn"
+                      onClick={() => toggleReadMore(index)}
+                    >
+                      {isExpanded ? "Show Less" : "Read More"}
+                    </button>
+                  )
+                }
 
-                <div className="project-tech">
-                  {project.tech?.map((tech, idx) => (
-                    <span key={idx}>{tech}</span>
-                  ))}
+                <div className="project-tech-wrapper">
+                  <span className="tech-label">stack:</span>
+                  <div className="project-tech">
+                    {project.tech?.map((tech, idx) => (
+                      <span key={idx}>{tech}</span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           );
         })}
-      </div>
-    </div>
+      </div >
+    </div >
   );
 };
 

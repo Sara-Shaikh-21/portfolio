@@ -1,258 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
-
-/* =========================
-   DESIGN TOKENS
-========================= */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg-primary: #080808;
-  --bg-secondary: #111111;
-  --bg-card: #151515;
-  --bg-card-hover: #1b1b1b;
-
-  --text-primary: #ffffff;
-  --text-secondary: #b8b8b8;
-  --text-muted: #777777;
-
-  --accent: #f5c451;
-  --accent-hover: #ffd76f;
-
-  --border: rgba(255, 255, 255, 0.1);
-  --border-hover: rgba(245, 196, 81, 0.35);
-
-  --max-width: 1400px;
-
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-
-  --transition: 0.3s ease;
+  --bg-primary: #0a0e14;
+  --bg-secondary: #10151d;
+  --bg-elevated: #161c26;
+  --border-color: #1f2733;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b98a5;
+  --accent: #4ade80;
+  /* terminal green */
+  --accent-dim: #22c55e33;
+  --accent-alt: #60a5fa;
+  /* wire in a blue accent too */
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-sans: 'Inter', sans-serif;
 }
 
-/* =========================
-   RESET
-========================= */
-
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
-  min-width: 320px;
-
   background: var(--bg-primary);
   color: var(--text-primary);
-
-  font-family: "Outfit", sans-serif;
-
-  line-height: 1.6;
-
-  overflow-x: hidden;
+  font-family: var(--font-sans);
+  margin: 0;
 }
 
-body,
-button,
-input,
-textarea,
-select {
-  font-family: "Outfit", sans-serif;
+code,
+.mono {
+  font-family: var(--font-mono);
 }
 
-/* =========================
-   GLOBAL ELEMENTS
-========================= */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--text-primary);
-  line-height: 1.15;
+.terminal-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-p {
+.terminal-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminal-dot.red {
+  background: #ff5f56;
+}
+
+.terminal-dot.yellow {
+  background: #ffbd2e;
+}
+
+.terminal-dot.green {
+  background: #27c93f;
+}
+
+.terminal-card-body {
+  padding: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
   color: var(--text-secondary);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-button {
-  border: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* =========================
-   SELECTION
-========================= */
-
-::selection {
-  color: #111111;
-  background: var(--accent);
-}
-
-/* =========================
-   SCROLLBAR
-========================= */
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-primary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: #333333;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555555;
-}
-
-/* =========================
-   COMMON CONTAINER
-========================= */
-
-.container {
-  width: min(100% - 40px, var(--max-width));
-  margin: 0 auto;
-}
-
-/* =========================
-   SECTION
-========================= */
-
-.section {
-  padding: 100px 0;
-}
-
-/* =========================
-   SECTION HEADING
-========================= */
-
-.section-label {
-  margin-bottom: 10px;
-
-  color: var(--accent);
-
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.section-title {
-  margin-bottom: 20px;
-
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 700;
-  letter-spacing: -1px;
-}
-
-.section-description {
-  max-width: 650px;
-
-  color: var(--text-secondary);
-
-  font-size: 1.05rem;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn {
+.skill-badge {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-
-  padding: 12px 26px;
-
-  color: #111111;
-  background: var(--accent);
-
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--accent-dim);
+  color: var(--accent);
   border: 1px solid var(--accent);
-  border-radius: var(--radius-sm);
-
-  font-size: 0.95rem;
-  font-weight: 700;
-
-  text-transform: uppercase;
-  text-decoration: none;
-
-  cursor: pointer;
-
-  transition:
-    transform var(--transition),
-    background-color var(--transition),
-    box-shadow var(--transition);
-}
-
-.btn:hover {
-  color: #111111;
-  background: var(--accent-hover);
-
-  transform: translateY(-2px);
-
-  box-shadow: 0 10px 30px rgba(245, 196, 81, 0.15);
-}
-
-.btn-light {
-  color: var(--text-primary);
-  background: transparent;
-  border-color: var(--border);
-}
-
-.btn-light:hover {
-  color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.06);
-  border-color: var(--border-hover);
-}
-
-/* =========================
-   FOCUS ACCESSIBILITY
-========================= */
-
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media screen and (max-width: 768px) {
-  .container {
-    width: min(100% - 30px, var(--max-width));
-  }
-
-  .section {
-    padding: 75px 0;
-  }
+  border-radius: 20px;
 }
