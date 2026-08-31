@@ -1,0 +1,645 @@
+/* =========================================
+   FREELANCING PAGE
+========================================= */
+
+.freelancing-section {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 6rem 0;
+
+    color: var(--text-primary, #fff);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.freelancing-hero {
+    text-align: center;
+
+    max-width: 850px;
+
+    margin: 0 auto 7rem;
+}
+
+.freelancing-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.6rem;
+
+    padding: 0.5rem 1rem;
+
+    margin-bottom: 1.5rem;
+
+    border-radius: 30px;
+
+    background: rgba(74, 222, 128, 0.07);
+
+    border: 1px solid rgba(74, 222, 128, 0.2);
+
+    color: var(--accent, #4ade80);
+
+    font-family: var(--font-mono, monospace);
+
+    font-size: 0.7rem;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--accent, #4ade80);
+
+    box-shadow: 0 0 10px var(--accent, #4ade80);
+
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 8px rgba(74, 222, 128, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+    }
+}
+
+.freelancing-label {
+    display: block;
+
+    margin-bottom: 1rem;
+
+    color: var(--accent, #4ade80);
+
+    font-family: var(--font-mono, monospace);
+
+    font-size: 0.8rem;
+}
+
+.freelancing-hero h1 {
+    margin: 0;
+
+    font-family: var(--font-mono, monospace);
+
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+
+    line-height: 1.15;
+}
+
+.freelancing-hero h1 span {
+    color: var(--accent, #4ade80);
+}
+
+.hero-description {
+    max-width: 680px;
+
+    margin: 1.5rem auto 2rem;
+
+    color: var(--text-secondary, #aaa);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+    flex-wrap: wrap;
+}
+
+.freelance-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.6rem;
+
+    padding: 0.8rem 1.3rem;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-family: var(--font-mono, monospace);
+
+    font-size: 0.75rem;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.freelance-btn:hover {
+    transform: translateY(-4px);
+}
+
+.freelance-btn.primary {
+    background: var(--accent, #4ade80);
+
+    color: #111;
+
+    box-shadow: 0 8px 25px rgba(74, 222, 128, 0.15);
+}
+
+.freelance-btn.primary:hover {
+    box-shadow: 0 12px 30px rgba(74, 222, 128, 0.25);
+}
+
+.freelance-btn.secondary {
+    border: 1px solid var(--border-color, #333);
+
+    color: var(--text-primary, #fff);
+
+    background: var(--bg-elevated, #151515);
+}
+
+.freelance-btn.secondary:hover {
+    border-color: var(--accent, #4ade80);
+
+    color: var(--accent, #4ade80);
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.freelance-container {
+    width: 100%;
+}
+
+.section-heading {
+    margin-bottom: 2.5rem;
+}
+
+.section-heading span {
+    color: var(--accent, #4ade80);
+
+    font-family: var(--font-mono, monospace);
+
+    font-size: 0.75rem;
+}
+
+.section-heading h2 {
+    margin: 0.4rem 0;
+
+    font-family: var(--font-mono, monospace);
+
+    font-size: 2rem;
+}
+
+.section-heading p {
+    max-width: 600px;
+
+    color: var(--text-secondary, #888);
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 1.2rem;
+}
+
+.service-card {
+    position: relative;
+
+    padding: 1.7rem;
+
+    min-height: 280px;
+
+    border-radius: 14px;
+
+    background: var(--bg-elevated, #151515);
+
+    border: 1px solid var(--border-color, #2b2b2b);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.service-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    top: -60px;
+    right: -60px;
+
+    border-radius: 50%;
+
+    background: rgba(74, 222, 128, 0.06);
+
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(74, 222, 128, 0.5);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.service-card:hover::before {
+    transform: scale(2.5);
+}
+
+.service-number {
+    position: absolute;
+
+    top: 1rem;
+    right: 1rem;
+
+    color: var(--text-secondary, #444);
+
+    font-family: var(--font-mono, monospace);
+
+    font-size: 0.7rem;
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1.5rem;
+
+    border-radius: 10px;
+
+    background: rgba(74, 222, 128, 0.08);
+
+    color: var(--accent, #4ade80);
+
+    font-size: 1.2rem;
+}
+
+.service-card h3 {
+    margin-bottom: 0.7rem;
+
+    font-family: var(--font-mono, monospace);
+
+    font-size: 1rem;
+}
+
+.service-card p {
+    margin-bottom: 1.2rem;
+
+    color: var(--text-secondary, #999);
+
+    font-size: 0.78rem;
+
+    line-height: 1.7;
+}
+
+.service-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.4rem;
+}
+
+.service-tags span {
+    padding: 0.3rem 0.5rem;
+
+    border-radius: 4px;
+
+    color: var(--accent, #4ade80);
+
+    background: rgba(74, 222, 128, 0.05);
+
+    border: 1px solid rgba(74, 222, 128, 0.15);
+
+    font-family: var(--font-mono, monospace);
+
+    font-size: 0.55rem;
+}
+
+
+/* =========================================
+   PROCESS
+========================================= */
+
+.process-section {
+    margin-top: 7rem;
+}
+
+.process-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    border-top: 1px solid var(--border-color, #2b2b2b);
+    border-bottom: 1px solid var(--border-color, #2b2b2b);
+}
+
+.process-step {
+    padding: 2rem 1.5rem;
+
+    border-right: 1px solid var(--border-color, #2b2b2b);
+
+    transition: background 0.25s ease;
+}
+
+.process-step:last-child {
+    border-right: none;
+}
+
+.process-step:hover {
+    background: rgba(74, 222, 128, 0.03);
+}
+
+.process-step strong {
+    color: var(--accent, #4ade80);
+
+    font-family: var(--font-mono, monospace);
+
+    font-size: 0.7rem;
+}
+
+.process-step h3 {
+    margin: 0.8rem 0 0.5rem;
+
+    font-family: var(--font-mono, monospace);
+
+    font-size: 1rem;
+}
+
+.process-step p {
+    color: var(--text-secondary, #888);
+
+    font-size: 0.75rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   TECHNOLOGIES
+========================================= */
+
+.technology-section {
+    margin-top: 7rem;
+}
+
+.technology-cloud {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.7rem;
+}
+
+.technology-cloud span {
+    padding: 0.55rem 0.9rem;
+
+    border: 1px solid var(--border-color, #333);
+
+    border-radius: 6px;
+
+    color: var(--text-secondary, #aaa);
+
+    font-family: var(--font-mono, monospace);
+
+    font-size: 0.7rem;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.technology-cloud span:hover {
+    color: var(--accent, #4ade80);
+
+    border-color: var(--accent, #4ade80);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.freelance-cta {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    margin-top: 7rem;
+
+    padding: 2.5rem;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(74, 222, 128, 0.08),
+            rgba(74, 222, 128, 0.02));
+
+    border: 1px solid rgba(74, 222, 128, 0.2);
+}
+
+.freelance-cta>div>span {
+    color: var(--accent, #4ade80);
+
+    font-family: var(--font-mono, monospace);
+
+    font-size: 0.7rem;
+}
+
+.freelance-cta h2 {
+    margin: 0.5rem 0;
+
+    font-family: var(--font-mono, monospace);
+
+    font-size: 1.5rem;
+}
+
+.freelance-cta p {
+    margin: 0;
+
+    color: var(--text-secondary, #888);
+
+    font-size: 0.8rem;
+}
+
+.cta-button {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.7rem;
+
+    padding: 0.9rem 1.3rem;
+
+    border-radius: 8px;
+
+    background: var(--accent, #4ade80);
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-family: var(--font-mono, monospace);
+
+    font-size: 0.7rem;
+
+    font-weight: 600;
+
+    transition: transform 0.25s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media screen and (max-width: 900px) {
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-step:nth-child(2) {
+        border-right: none;
+    }
+
+    .process-step:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--border-color, #2b2b2b);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+    .freelancing-section {
+        width: 92%;
+
+        padding: 4rem 0;
+    }
+
+    .freelancing-hero {
+        margin-bottom: 5rem;
+    }
+
+    .freelancing-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-description {
+        font-size: 0.85rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .freelance-btn {
+        justify-content: center;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: auto;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-step {
+        border-right: none;
+
+        border-bottom: 1px solid var(--border-color, #2b2b2b);
+    }
+
+    .process-step:last-child {
+        border-bottom: none;
+    }
+
+    .freelance-cta {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 1.5rem;
+    }
+
+    .cta-button {
+        width: 100%;
+
+        justify-content: center;
+    }
+}
