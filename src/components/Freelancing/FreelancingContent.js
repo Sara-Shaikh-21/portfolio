@@ -7,7 +7,7 @@ import "./FreelancingContent.css";
 import {
     FaCode,
     FaLaptopCode,
-    FaMobileAlt,
+    FaMobileScreenButton,
     FaRobot,
     FaGlobe,
     FaArrowUpRightFromSquare,
@@ -33,10 +33,10 @@ const FreelancingContent = () => {
             tags: ["MERN", "REST APIs", "MongoDB"],
         },
         {
-            icon: <FaMobileAlt />,
+            icon: <FaMobileScreenButton />,
             title: "Mobile Development",
             description:
-                "Responsive mobile interfaces and application screens with clean UI, reusable components and smooth navigation.",
+                "Responsive mobile interfaces and applications screens with clean UI, reusable components and smooth navigation.",
             tags: ["Flutter", "Dart", "Responsive UI"],
         },
         {
