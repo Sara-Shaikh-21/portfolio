@@ -1,35 +1,28 @@
 import React from "react";
-import "./index.css";
+import { Routes, Route } from "react-router-dom";
+
 import Home from "./routes/Home";
 import Contact from "./routes/Contact";
 import About from "./routes/About";
 import Projects from "./routes/Projects";
 import Education from "./routes/Education";
 import Skills from "./routes/Skills";
-import Experiences from "./routes/Experiences"
-import { Routes, Route } from "react-router-dom";
-// use rafce to create dummmy structure
-
-
+import Experiences from "./routes/Experiences";
+import Freelancing from "./routes/Freelancing";
 
 function App() {
   return (
-    <>
-
     <Routes>
-    //creates the routes
       <Route path="/" element={<Home />} />
-      <Route path="/Projects" element={<Projects />} />
-      <Route path="/Contact" element={<Contact />} />
-      <Route path="/About" element={<About />} />
-      <Route path="/Education" element={<Education />} />
-      <Route path="/Skills" element={<Skills />} />
-      <Route path="/Experiences" element={<Experiences />}/>     
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/education" element={<Education />} />
+      <Route path="/skills" element={<Skills />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/experience" element={<Experiences />} />
+      <Route path="/freelancing" element={<Freelancing />} />
     </Routes>
-
-    </>
   );
-  
 }
 
 export default App;

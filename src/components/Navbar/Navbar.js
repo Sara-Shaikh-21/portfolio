@@ -1,48 +1,89 @@
-import "./NavbarStyles.css"
-import React,{ useState } from 'react'
-import { Link } from "react-router-dom"
-import { FaBars, FaTimes } from "react-icons/fa"
+import React, { useEffect, useState } from "react";
+import { NavLink, Link } from "react-router-dom";
+import { FaBars, FaTimes, FaArrowRight } from "react-icons/fa";
+import "./NavbarStyles.css";
 
 const Navbar = () => {
-const [click,setClick]=useState(false);
-const handleClick = () => setClick(!click);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-const [color,setColor]=useState(false);
-const changeColor = () => {
-  if(window.scrollY >= 100){
-    setColor(true);
-  }
-  else{
-    setColor(false);
-  }
-};
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
 
-window.addEventListener("scroll", changeColor);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  const navLinks = [
+    { name: "About", path: "/about" },
+    { name: "Experience", path: "/experience" },
+    { name: "Projects", path: "/projects" },
+    { name: "Skills", path: "/skills" },
+    { name: "Education", path: "/education" },
+    { name: "Freelancing", path: "/freelancing" },
+    { name: "Contact", path: "/contact" },
+  ];
 
   return (
-    <div className={color?"header header-bg":"header"}>
-        <Link to="/">
-        <h1>SARA SHAIKH</h1>
+    <header className={`header ${scrolled ? "header-bg" : ""}`}>
+      <div className="navbar-container">
+
+        {/* Logo */}
+        <Link to="/" className="navbar-logo" onClick={closeMenu}>
+          <span>SARA</span>
+          <span>SHAIKH</span>
         </Link>
 
-        <ul className={click? "nav-menu active": "nav-menu"}>
-            <li><Link to="/About">About Myself</Link></li>
-            <li><Link to="/Contact">Contact Me</Link></li>
-            <li><Link to="/Education">Education</Link></li>
-            <li><Link to="/Skills">Skills</Link></li>            
-            <li><Link to="/Projects">Projects</Link></li>
-            <li><Link to="/Experiences">Experiences</Link></li>
-            
-        </ul>
+        {/* Desktop / Mobile Navigation */}
+        <nav className={`nav-menu ${menuOpen ? "active" : ""}`}>
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.path}
+              to={link.path}
+              onClick={closeMenu}
+              className={({ isActive }) =>
+                isActive ? "nav-link active-link" : "nav-link"
+              }
+            >
+              {link.name}
+            </NavLink>
+          ))}
 
-        <div className="hamBurger" onClick={ handleClick }>
-        {click?(<FaTimes size={20} style={{color:"#fff"}}/>):( <FaBars size={20} style={{color:"#fff"}}/>)}
-            
-           
-        </div>
-        
-    </div>
-  )
-}
+          {/* Resume */}
+          <a
+            href="/Sara-Shaikh-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="resume-button"
+            onClick={closeMenu}
+          >
+            Resume
+            <FaArrowRight size={12} />
+          </a>
+        </nav>
 
-export default Navbar
+        {/* Mobile Menu Button */}
+        <button
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+
+      </div>
+    </header>
+  );
+};
+
+export default Navbar;
