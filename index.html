@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Sara Shaikh's portfolio" />
+  <link rel="apple-touch-icon" href="/logo192.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <title>Sara Shaikh</title>
+  <style>
+    df-messenger {
+      margin: 0;
+      padding: 0;
+      --df-messenger-button-titlebar-color: rgba(194, 185, 180, 0.881);
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script type="module" src="/src/index.js"></script>
+  <script type="module" src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger intent="WELCOME" chat-title="Portfolio_chatbot" agent-id="24f054b7-2b10-47f3-9e07-27ed5c21907f"
+    language-code="en"></df-messenger>
+</body>
+
+</html>
