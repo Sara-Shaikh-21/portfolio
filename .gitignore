@@ -5,7 +5,7 @@
 /.pnp
 .pnp.js
 .nvmrc
-dist/
+/dist
 
 # testing
 /coverage
