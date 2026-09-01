@@ -285,6 +285,7 @@ const FreelancingContent = () => {
                     <a
                         href="mailto:sarassk21@gmail.com"
                         className="cta-button"
+                        target="_blank"
                     >
                         Get In Touch
                         <FaArrowUpRightFromSquare />
